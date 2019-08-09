@@ -74,7 +74,10 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-inside
-
+# Security
+##
+encrypt:
+    enable: true
 # live2D
 # live2d:
 #   enable: true
