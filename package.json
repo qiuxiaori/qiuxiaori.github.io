@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "hexo": "^3.9.0",
+    "hexo-admin": "^2.3.0",
     "hexo-blog-encrypt": "^2.2.2",
     "hexo-deployer-git": "^1.0.0",
     "hexo-generator-archive": "^0.1.5",
@@ -14,6 +15,7 @@
     "hexo-generator-index-pin-top": "^0.2.2",
     "hexo-generator-sitemap": "^1.2.0",
     "hexo-generator-tag": "^0.2.0",
+    "hexo-neat": "^1.0.4",
     "hexo-renderer-ejs": "^0.3.1",
     "hexo-renderer-marked": "^1.0.1",
     "hexo-renderer-stylus": "^0.3.3",

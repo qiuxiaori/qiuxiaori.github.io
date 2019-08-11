@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 当秋意渐浓
-subtitle: '击鼓之后<br>我们把在黑暗中跳舞的心脏叫做月亮<br>这月亮主要由你构成'
+title: Autumn Sun
+subtitle: 'Some birds don’t mean to be caged . Their feathers are just too bright. And when they fly away, the part of you that knows it was a sin to lock them up.'
 description: '&nbsp;&nbsp;&nbsp;&nbsp;小日也想变得有钱。'
 keywords:
 author: 秋小日
@@ -106,3 +106,24 @@ deploy:
   type: git
   repo: git@github.com:qiuxiaori/qiuxiaori.github.io.git
   branch: master
+
+admin:
+  deployCommand: './hexo-pubish.bat'
+
+# hexo-neat 博客压缩
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:
+
+neat_css:
+  enable: true
+  exclude:
+    - '*.min.css'
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js'
