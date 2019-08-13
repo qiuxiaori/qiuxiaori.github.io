@@ -1,0 +1,134 @@
+---
+title: Hexo 博客 next 主题优化
+author: 秋小日
+tags:
+  - hexo
+categories:
+  - 编程技术
+---
+
+> 搭建好 hexo 博客后陆陆续续试用了几个主题，但是功能都不是很强大，最后我还是选择了集成服务较多，生态较好的[Next](https://theme-next.iissnan.com/)主题。
+
+<!--more-->
+
+### 主题安装
+
+1. 下载方式
+   克隆项目到项目 themes 目录下
+   `git clone git@github.com:iissnan/hexo-theme-next.git`
+2. 配置主题
+   修改文件名为 next，在站点配置文件中把 theme 设置为 next 即可。
+3. 基本配置项
+   网站样式，边栏头像等见[官网](https://theme-next.iissnan.com/)。
+
+---
+
+## 深度优化
+
+---
+
+### 一.设置 RSS
+
+1. 安装插件
+   `npm install --save hexo-generator-feed`
+2. 站点配置文件搜索 plugins 添加如下
+   `plugins: hexo-generate-feed`
+3. 打开主题配置文件搜索 rss 并修改为如下
+   `rss: /atom.xml`
+
+### 二.样式修改
+
+```
+  theme/next/source/css/_custom/custom styles. // 用户可以在这个文件中自定义网站样式
+  @media screen and (min-width:1200px) {
+
+      body {
+      background-image:url(/images/bg1.jpg);      //这一行的括号里填背景图片的路径，将图片重命名为background.jpg放在\themes\next\source\images下，也可填图片的链接。
+      background-repeat: no-repeat;
+      background-attachment:fixed;
+        background-position:50% 50%;
+      background-size: 100%;
+    }
+
+      #footer a {                                 // 配置页脚
+          color:#eee;
+      }
+
+      .site-meta {
+        background-color: #868181;
+      }
+      .main-inner {                               // 配置文章区域
+        background: #fff;
+        opacity: 0.9;
+      }
+      .header-inner {                             // 配置网站头
+        opacity: 0.85;
+      }
+      .sidebar {                                  // 配置侧边栏
+        opacity: 0.9;
+        margin-left: -200px;
+      }
+      .posts-expand .post-eof {
+        width: 100%;
+      }
+      .posts-expand .post-tags a {
+        border-bottom: none;
+      }
+  }
+```
+
+### 三.评论功能
+
+我使用的是 github 提供的评论功能，需要在 git 上申请，再在主题配置中开启。
+
+1. 注册 OAuth application
+   在[github](https://github.com/settings/profile) 中进行注册
+   点击左侧 Developer settings -> New Github App
+
+   ```
+   Application name:                  // 应用名称
+   Homepage URL:                      // 网站 URL(填自己的博客主页地址)
+   Application description:           // 描述
+   Authorization callback URL:        // 网站 URL(填自己的博客主页地址)
+   Webhook URL:                       // 网站 URL(填自己的博客主页地址)
+   ```
+
+   注册完成之后，会得到：Client ID 和 Client Secret,可以在 github 中建一个项目，专门用来存储你的博客评论
+
+2. 配置 next 主题文件
+   编辑主题配置文件：themes/next/\_config.yml，找到有关 gitment 的设置
+
+```
+  gitment:
+    enable: true
+    mint: true
+    count: true
+    lazy: false                     // 评论懒加载，如果true，则默认不展示评论，点击按钮查看评论
+    cleanly: false
+    language:
+    github_user:                    // github 用户名
+    github_repo: BlogComments       // 上一步新建存放评论的仓库SSH地址
+    client_id: b8bad0exxxx          // 上面注册OAuth Application的Client ID
+    client_secret: bcee560xxxxxx    // 上面注册OAuth Application申请的Client Secret
+    proxy_gateway:
+    redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint
+```
+
+### 四.日历云功能
+
+参考文章: 1.[hexo-next 主题添加日历云](https://www.zhyong.cn/posts/1da9/)
+
+### 五.文章计数
+
+### 六.访客统计
+
+next 主题内置了多种第三方统计插件，我使用的是不蒜子统计
+
+1. 开启插件
+   在主题配置文件中找到 busuanzi 相关的配置，设置为 true
+2. 修改 swig 文件
+   因为不蒜子官网的域名过期，next 主题并未修改这个 js 引用。打开/theme/next/layout/\_third-party/analytics/busuanzi-counter.swig 文件。
+   找到引用了如下 js 代码的 script 标签
+   `https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js`
+   修改为
+   `https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js`
