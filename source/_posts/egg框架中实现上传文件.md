@@ -29,7 +29,7 @@ npm i egg-multipart
   '.mp3','.mp4','.avi',
 ];
 ```
-  一开始我就踩了两个坑，从前端传文件过来mode需要设置为stream，白名单里没有的文件格式一定要添加到fileExtensions中，否则直接会报错。
+ 白名单里没有的文件格式一定要添加到fileExtensions中，否则会报下面的错误。
   `nodejs.Error: Invalid filename`
 2. file模式
 > 如果您不知道Node.js Stream工作方式，也许您应该使用该file模式开始。用法与bodyParser非常相似。
@@ -97,9 +97,9 @@ describe('test/app/service/story.test.js', () => {
   it('should add story', async () => {
     const ctx = await app.httpRequest()
       .post('/api/project/story/addStoryByFile')
-      .attach('file', '/Users/zmy/Downloads/爱云校研发管理v1.0/data/document.js')           //  要上传的文件路径
       .field('workspace_id', '62604516')              // 上传文件时不能使用send方法，要使用field发送参数，多个参数时级联field
-      .field('iteration_id', '116260451600100098');
+      .field('iteration_id', '116260451600100098')
+      .attach('file', '/Users/zmy/Downloads/爱云校研发管理v1.0/data/document.js');    // 要上传的文件路径,必须在field后调用
     assert(ctx.body.code === 0);                 // 返回的参数在result的body 中
   });
 });
