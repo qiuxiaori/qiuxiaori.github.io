@@ -1,5 +1,5 @@
 ---
-title: Hexo 博客 next 主题优化
+title: Hexo博客next主题优化
 author: 秋小日
 tags:
   - hexo
@@ -12,7 +12,6 @@ categories:
 <!--more-->
 
 ### 主题安装
-
 1. 下载方式
    克隆项目到项目 themes 目录下
    `git clone git@github.com:iissnan/hexo-theme-next.git`
@@ -28,7 +27,6 @@ categories:
 ---
 
 ### 一.设置 RSS
-
 1. 安装插件
    `npm install --save hexo-generator-feed`
 2. 站点配置文件搜索 plugins 添加如下
@@ -37,7 +35,6 @@ categories:
    `rss: /atom.xml`
 
 ### 二.样式修改
-
 ```
   theme/next/source/css/_custom/custom styles. // 用户可以在这个文件中自定义网站样式
   @media screen and (min-width:1200px) {
@@ -78,20 +75,19 @@ categories:
 ```
 
 ### 三.评论功能
-
 我使用的是 github 提供的评论功能，需要在 git 上申请，再在主题配置中开启。
 
 1. 注册 OAuth application
    在[github](https://github.com/settings/profile) 中进行注册
    点击左侧 Developer settings -> New Github App
 
-   ```
-   Application name:                  // 应用名称
-   Homepage URL:                      // 网站 URL(填自己的博客主页地址)
-   Application description:           // 描述
-   Authorization callback URL:        // 网站 URL(填自己的博客主页地址)
-   Webhook URL:                       // 网站 URL(填自己的博客主页地址)
-   ```
+ ```
+  Application name:                  // 应用名称
+  Homepage URL:                      // 网站 URL(填自己的博客主页地址)
+  Application description:           // 描述
+  Authorization callback URL:        // 网站 URL(填自己的博客主页地址)
+  Webhook URL:                       // 网站 URL(填自己的博客主页地址)
+```
 
    注册完成之后，会得到：Client ID 和 Client Secret,可以在 github 中建一个项目，专门用来存储你的博客评论
 
@@ -115,13 +111,11 @@ categories:
 ```
 
 ### 四.日历云功能
-
 参考文章: 1.[hexo-next 主题添加日历云](https://www.zhyong.cn/posts/1da9/)
 
 ### 五.文章计数
 
 ### 六.访客统计
-
 next 主题内置了多种第三方统计插件，我使用的是不蒜子统计
 
 1. 开启插件
@@ -132,3 +126,74 @@ next 主题内置了多种第三方统计插件，我使用的是不蒜子统计
    `https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js`
    修改为
    `https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js`
+
+### 七.添加emoji表情
+hexo原生的markdown渲染引擎不支持emoji，所以我们替换为hexo-renderer-markdown-it引擎，同时hexo-renderer-markdown-it 没有内置的emoji插件，我们还要安装install markdown-it-emoji插件。
+1. 安装替换
+```
+npm un hexo-renderer-marked --save
+npm i hexo-renderer-markdown-it --save
+npm install markdown-it-emoji --save
+```
+2. 配置
+```
+// 站点配置文件_config.yml,添加如下配置
+markdown:
+  render:
+    html: true         // 设置为true，否则无法转义html，导致<!--more-->渲染失败
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-footnote
+    - markdown-it-sup
+    - markdown-it-sub
+    - markdown-it-abbr
+    - markdown-it-emoji     // 我们自行拓展的emoji插件
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSymbol: '' 
+```
+
+
+### 八.可视化管理博客
+  安装 hexo-admin插件就能本地访问[https://127.0.0.1:4000/admin](https://127.0.0.1:4000/admin "https://127.0.0.1:4000/admin")就可以方便的管理博客了。不过俺觉得admin这个插件页面太丑，markdown编辑器功能也很low，就自己写了一个node项目，随便搭了个页面用来管理博客。
+1. 实现思路
+  基于node的文件操作，在博客项目source/_post路径中写入和删除文件。
+2. 项目地址
+  https://github.com/qiuxiaori/hexo-admin
+3. 主要配置
+  //config/config.default.js:
+  `config.url = "你自己的hexo项目的source/_post的绝对路径"`
+4. 部署到github
+  执行hexo clean,hexo g,hexo d手动更新到github。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
