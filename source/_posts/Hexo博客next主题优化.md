@@ -75,7 +75,7 @@ categories:
 ```
 
 ### 三.评论功能
-我使用的是 github 提供的评论功能，需要在 git 上申请，再在主题配置中开启。
+  我使用的是 github 提供的评论功能，需要在 git 上申请，再在主题配置中开启。
 
 1. 注册 OAuth application
    在[github](https://github.com/settings/profile) 中进行注册
@@ -116,7 +116,7 @@ categories:
 ### 五.文章计数
 
 ### 六.访客统计
-next 主题内置了多种第三方统计插件，我使用的是不蒜子统计
+  next 主题内置了多种第三方统计插件，我使用的是不蒜子统计
 
 1. 开启插件
    在主题配置文件中找到 busuanzi 相关的配置，设置为 true
@@ -128,7 +128,7 @@ next 主题内置了多种第三方统计插件，我使用的是不蒜子统计
    `https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js`
 
 ### 七.添加emoji表情
-hexo原生的markdown渲染引擎不支持emoji，所以我们替换为hexo-renderer-markdown-it引擎，同时hexo-renderer-markdown-it 没有内置的emoji插件，我们还要安装install markdown-it-emoji插件。
+ hexo原生的markdown渲染引擎不支持emoji，所以我们替换为hexo-renderer-markdown-it引擎，同时hexo-renderer-markdown-it 没有内置的emoji插件，我们还要安装install markdown-it-emoji插件。
 1. 安装替换
 ```
 npm un hexo-renderer-marked --save
@@ -136,8 +136,7 @@ npm i hexo-renderer-markdown-it --save
 npm install markdown-it-emoji --save
 ```
 2. 配置
-```
-// 站点配置文件_config.yml,添加如下配置
+```// 站点配置文件_config.yml,添加如下配置
 markdown:
   render:
     html: true         // 设置为true，否则无法转义html，导致<!--more-->渲染失败
@@ -172,9 +171,31 @@ markdown:
   `config.url = "你自己的hexo项目的source/_post的绝对路径"`
 4. 部署到github
   执行hexo clean,hexo g,hexo d手动更新到github。
+ 
+### 九.添加图片
+#### 绝对路径
+当Hexo项目中只用到少量图片时，可以将图片都放在source/images文件夹中，通过markdown语法访问它们,图片既可以在首页内容中访问到，也可以在文章正文中访问到。
 
+```// source/images/image.jpg
+![](/images/image.jpg)
+```
 
+#### 相对路径
+1. 配置文件
+图片除了可以放在统一的images文件夹中，还可以放在文章自己的目录中。文章的目录可以通过配置站点文件_config.yml来生成。
+`post_asset_folder: true`
 
+2. 生成文件夹
+将_config.yml文件中的配置项post_asset_folder设为true后，执行命令
+`$ hexo new post_name`
+ 在source/_posts中会生成文章post_name.md和同名文件夹post_name。将图片资源放在post_name中，文章就可以使用相对路径引用图片资源了。```// _posts/post_name/image.jpg
+![](image.jpg)
+```
+
+3. 首页显示
+上述是markdown的引用方式，图片只能在文章中显示，但无法在首页中正常显示。如果希望图片在文章和首页中同时显示，可以使用标签插件语法。```// _posts/post_name/image.jpg
+{% asset_img image.jpg This is an image %} 
+```
 
 
 

@@ -7,7 +7,7 @@ categories: 编程技术
 <!--more-->
 ### 一.egg-multipart
 1. 配置使用
-```
+```js
 //安装egg-multipart
 npm i egg-multipart
 // config/config.default.js：
@@ -58,7 +58,7 @@ npm i await-stream-ready    // 用于异步操作文件
 npm i stream-wormhole       // 关闭文件流
 ```
 2. 引入模块
-```
+```js
 // loadService.js
 const fs = require('fs');     // node的fs文件模块
 const path = require('path'); // node的path路径模块
@@ -67,7 +67,7 @@ const awaitWriteStream = require('await-stream-ready').write;
 const sendToWormhole = require('stream-wormhole');
 ```
 3. 上传文件
-```
+```js
 // loadService.js
 async addStoryByFile() {
   const { ctx, app } = this;
@@ -89,7 +89,7 @@ async addStoryByFile() {
 ```
 ### 三.关于egg中文件上传的单元测试踩坑记
   egg的单元测试本身是很简单的，但是文件上传有几个小坑，因为multipart插件要求传输头的Content-Type是multipart/form-data类型的，在测试时尝试了很多方法都没法把mock的ctx设置传输头。翻了很多文档，service层的文件上传测试依然没找到解决方法，希望日后能找到把，目前只找到了controller层测试文件上传的方法，如下：
-```
+```js
 'use strict';
 const { app, assert, mock } = require('egg-mock/bootstrap');   // 引入egg封装好的mock模块
 const fs = require('fs');                                                           //引入文件模块
