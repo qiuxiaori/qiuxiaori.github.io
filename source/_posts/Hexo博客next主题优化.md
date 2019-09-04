@@ -197,6 +197,8 @@ markdown:
 {% asset_img image.jpg This is an image %} 
 ```
 
+### 十.添加天气插件
+访问[天气API插件](https://www.tianqiapi.com/?action=iframe)官网，可以看到多款好用的插件样式，选择喜欢的复制代码到博客需要显示的页面并调整样式即可。
 
 
 

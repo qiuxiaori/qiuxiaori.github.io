@@ -15,8 +15,7 @@ categories:
 2. 安装Hexo
   命令行运行以下代码
   `npm install -g hexo-cli`
-3. 初始化博客框架
-  ```
+3. 初始化博客框架```js
   hexo init [blog_name]         //在要创建博客的路径下,blog_name为你的博客名称
   cd [blog_name]                //移动到博客项目
   npm install                   //安装依赖
@@ -39,8 +38,7 @@ categories:
 1. 新建仓库
   仓库名为：<Github账号名称>.github.io
 2. 配置项目
-  在项目根目录的_config.yml文件最后添加如下代码：
-  ```
+  在项目根目录的_config.yml文件最后添加如下代码：```js
   deploy:
   type: git 
   repo: git@github.com:<Github账号名称>/<Github账号名称>.github.io
@@ -49,8 +47,7 @@ categories:
   * 安装hexo-deployer-git插件，在命令行运行以下命令：
   `npm install hexo-deployer-git --save`
   * 推送到GithubPages。
-  在命令行（即Git Bash）依次输入以下命令， 返回INFO Deploy done: git即成功推送：
-  ```
+  在命令行（即Git Bash）依次输入以下命令， 返回INFO Deploy done: git即成功推送：```js
   hexo g
   hexo d```
 4. 等待1分钟左右，浏览器访问网址： https://<Github账号名称>.github.io
