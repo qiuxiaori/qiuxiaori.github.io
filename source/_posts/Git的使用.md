@@ -94,6 +94,25 @@ git remote add origin git@github.com:zmyCris/fisdhad-f.git
 git push -u origin master
 ```
 
-### 七.分支与合并
+### 七.回滚
+当我们想要撤销提交回滚到之前的某次提交时就要用到reset命令了，reset命令能够把仓库回滚到指定的某次提交时的状态，也就是说我们如果要撤销a提交，就要选择它的前一次提交。
+1. 查看提交的哈希码
+使用下面的命令查看git仓库日志，拿到commit后边的哈希码，就是我们等会要操作的对象。```
+git log
+// ctrl+z 退出日志模式
+```
+![gitlog](/images/git01.jpeg)
 
-咕。。。
+2. 回滚提交
+* 回滚提交并将修改置为已commit
+`git reset --soft [c89936abefaf3a23a0ffc541f75db00f19cd6e8b]`
+
+* 回滚提交将修改置为未commit
+`git reset --mixed [c89936abefaf3a23a0ffc541f75db00f19cd6e8b]`
+
+* 回滚并删除修改的内容，谨慎操作
+`git reset --hard [c89936abefaf3a23a0ffc541f75db00f19cd6e8b]`
+
+3. 同步远程仓库
+本地回滚后远程仓库还是回滚前的状态，这时我们执行以下命令要强制同步本地仓库。
+`git push origin master -f`
