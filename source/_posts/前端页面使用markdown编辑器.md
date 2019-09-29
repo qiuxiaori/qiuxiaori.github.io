@@ -1,25 +1,26 @@
 ---
-title: 前端页面使用editor富文本编辑器
+title: 前端页面使用editor编辑器
 tags: 前端
 categories: 编程技术
 ---
+
 > 富文本编辑器，Rich Text Editor, 简称 RTE, 是一种可内嵌于浏览器，所见即所得的文本编辑器。富文本编辑器不同于文本编辑器，程序员可到网上下载免费的富文本编辑器内嵌于自己的网站或程序里，方便用户编辑文章或信息。
 
 <!--more-->
 
-目前常见的富文本编辑器有很多，比如[editor](https://github.com/pandao/editor.md),[showdown](https://github.com/showdownjs/showdown)等，个人觉得editor使用感不错，简单记录一下在editor的使用方式。
+目前常见的富文本编辑器有很多，比如[editor](https://github.com/pandao/editor.md),[showdown](https://github.com/showdownjs/showdown)等，个人觉得 editor 使用感不错，简单记录一下在 editor 的使用方式。
 
-### 一.获取editor
+### 一.获取 editor
 
 1. Github download
-`git clone git@github.com:pandao/editor.md.git`
-或见[git主页](https://github.com/pandao/editor.md)
+   `git clone git@github.com:pandao/editor.md.git`
+   或见[git 主页](https://github.com/pandao/editor.md)
 2. NPM install :
-`npm install editor.md`
+   `npm install editor.md`
 3. Bower install :
-`bower install editor.md`
+   `bower install editor.md`
 
-### 二.使用editor
+### 二.使用 editor
 
 ```
   // 引入文件，href为存放下载的editor插件的路径
@@ -41,8 +42,11 @@ categories: 编程技术
       });
   </script>
 ```
+
 ### 三.编辑器初始化属性
+
 重要属性大致介绍，相当于翻译了下注释哈哈
+
 ```
   {
     mode                 : "gfm",          // gfm or markdown[编辑器模式]
@@ -88,7 +92,7 @@ categories: 编程技术
     fontSize             : "13px",
     saveHTMLToTextarea   : false,          // If enable, Editor will create a <textarea name="{editor-id}-html-code"> tag save HTML code for form post to server-side.
     disabledKeyMaps      : [],
-    
+
     onload               : function() {},
     onresize             : function() {},
     onchange             : function() {},
@@ -100,7 +104,7 @@ categories: 编程技术
     onfullscreenExit     : function() {},
     onscroll             : function() {},
     onpreviewscroll      : function() {},
-    
+
     imageUpload          : false,          // Enable/disable upload
     imageFormats         : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
     imageUploadURL       : "",             // Upload url
@@ -113,7 +117,7 @@ categories: 编程技术
     tocDropdown          : false,          // Enable/disable Table Of Contents dropdown menu
     tocContainer         : "",             // Custom Table Of Contents Container Selector
     tocStartLevel        : 1,              // Said from H1 to create ToC
-    htmlDecode           : false,          // Open the HTML tag identification 
+    htmlDecode           : false,          // Open the HTML tag identification
     pageBreak            : true,           // Enable parse page break [========]
     atLink               : true,           // for @link
     emailLink            : true,           // for email address auto link
@@ -143,7 +147,7 @@ categories: 编程技术
         "ucwords"        : "<a href=\"javascript:;\" title=\"ucwords\" unselectable=\"on\"><i class=\"fa\" name=\"ucwords\" style=\"font-size:20px;margin-top: -3px;\">Aa</i></a>"
     },
     toolbarIconTexts     : {},
-    
+
     lang : {  // Language data, you can custom your language.
         name        : "zh-cn",
         description : "开源在线Markdown编辑器<br/>Open source online Markdown editor.",
@@ -161,12 +165,14 @@ categories: 编程技术
     }
   }
 ```
-### 四.md文本转html
+
+### 四.md 文本转 html
+
 ```
 <link rel="stylesheet" href="editormd/css/editormd.preview.css" />
 <div id="test-markdown-view">
     <!-- Server-side output Markdown text -->
-    <textarea style="display:none;">### Hello world!</textarea>             
+    <textarea style="display:none;">### Hello world!</textarea>
 </div>
 <script src="jquery.min.js"></script>
 <script src="editormd/editormd.js"></script>

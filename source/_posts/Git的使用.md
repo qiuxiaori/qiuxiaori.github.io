@@ -95,12 +95,15 @@ git push -u origin master
 ```
 
 ### 七.回滚
-当我们想要撤销提交回滚到之前的某次提交时就要用到reset命令了，reset命令能够把仓库回滚到指定的某次提交时的状态，也就是说我们如果要撤销a提交，就要选择它的前一次提交。
-1. 查看提交的哈希码
-使用下面的命令查看git仓库日志，拿到commit后边的哈希码，就是我们等会要操作的对象。```
-git log
-// ctrl+z 退出日志模式
-```
+
+当我们想要撤销提交回滚到之前的某次提交时就要用到 reset 命令了，reset 命令能够把仓库回滚到指定的某次提交时的状态，也就是说我们如果要撤销 a 提交，就要选择它的前一次提交。
+
+1. 查看提交的 id
+   使用下面的命令查看 git 仓库日志，拿到 commit 后边的 id，就是我们等会要操作的对象。```
+   git log
+   // ctrl+z 退出日志模式
+
+````
 ![gitlog](/images/git01.jpeg)
 
 2. 回滚提交
@@ -115,4 +118,12 @@ git log
 
 3. 同步远程仓库
 本地回滚后远程仓库还是回滚前的状态，这时我们执行以下命令要强制同步本地仓库。
-`git push origin master -f`
+`git push master -f`
+
+### 八.合并分支
+假如我们在master分支外创建了一个dev分支，工作完成后想要把dev分支的内容同步到master分支，就要用到merge命令。```js
+// 切换到master分支
+git checkout master
+// 合并dev分支
+git merge dev
+````
