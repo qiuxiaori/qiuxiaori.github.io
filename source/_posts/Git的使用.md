@@ -83,7 +83,6 @@ git commit -m "对本次提交做的描述，必选"
 git remote add origin git@github.com:zmyCris/fisdhad-f.git
 ```
 
-获取项目 git 地址
 
 6.2 推送
 
@@ -117,10 +116,17 @@ git push -u origin master
 `git reset --hard [c89936abefaf3a23a0ffc541f75db00f19cd6e8b]`
 
 3. 同步远程仓库
-本地回滚后远程仓库还是回滚前的状态，这时我们执行以下命令要强制同步本地仓库。
-`git push master -f`
+本地回滚后远程仓库还是回滚前的状态，这时我们执行以下命令要强制远程仓库同步本地仓库。
+`git push -f [name]`
 
-### 八.合并分支
+### 八.删除分支
+分支的删除分为删除本地分支和删除远程分支
+1. 删除本地分支
+`git branch -D [name]`
+2. 删除远程分支
+`git push origin --delete [name]`
+
+### 九.合并分支
 假如我们在master分支外创建了一个dev分支，工作完成后想要把dev分支的内容同步到master分支，就要用到merge命令。```js
 // 切换到master分支
 git checkout master
