@@ -20,11 +20,9 @@ categories:
 3. 基本配置项
    网站样式，边栏头像等见[官网](https://theme-next.iissnan.com/)。
 
----
-
-## 深度优化
-
----
+{% note success %}
+_深度优化_
+{% endnote %}
 
 ### 一.设置 RSS
 1. 安装插件
@@ -114,6 +112,7 @@ categories:
 参考文章: 1.[hexo-next 主题添加日历云](https://www.zhyong.cn/posts/1da9/)
 
 ### 五.文章计数
+next主题集成了计数功能，将主题配置文件中`post_wordcount`配置项设置为true即可。
 
 ### 六.访客统计
   next 主题内置了多种第三方统计插件，我使用的是不蒜子统计
@@ -159,7 +158,6 @@ markdown:
     permalinkSymbol: '' 
 ```
 
-
 ### 八.可视化管理博客
   安装 hexo-admin插件就能本地访问[https://127.0.0.1:4000/admin](https://127.0.0.1:4000/admin "https://127.0.0.1:4000/admin")就可以方便的管理博客了。不过俺觉得admin这个插件页面太丑，markdown编辑器功能也很low，就自己写了一个node项目，随便搭了个页面用来管理博客。
 1. 实现思路
@@ -171,8 +169,8 @@ markdown:
   `config.url = "你自己的hexo项目的source/_post的绝对路径"`
 4. 部署到github
   执行hexo clean,hexo g,hexo d手动更新到github。
- 
-### 九.添加图片
+
+### 九.在博文中添加图片
 #### 绝对路径
 当Hexo项目中只用到少量图片时，可以将图片都放在source/images文件夹中，通过markdown语法访问它们,图片既可以在首页内容中访问到，也可以在文章正文中访问到。
 
@@ -200,11 +198,99 @@ markdown:
 ### 十.添加天气插件
 访问[天气API插件](https://www.tianqiapi.com/?action=iframe)官网，可以看到多款好用的插件样式，选择喜欢的复制代码到博客需要显示的页面并调整样式即可。
 
+### 十一.添加顶部加载条
+在next插件目录文件`/themes/next/layout/_partials/head.swig`的meta头部后添加代码
+```// /themes/next/layout/_partials/head.swig
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+```
+
+```
+<style>
+    .pace .pace-progress {
+        background: #ff6700; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+```
+
+### 十二.修改底部标签
+打开/themes/next/layout/_macro/post.swig
+搜索 `rel="tag">#`，将 # 换成 `<i class="fa fa-tag"></i>`或是图标库喜欢的icon
+
+### 十三.note提示块
+1. 配置文件
+```
+# Note tag (bs-callout).
+note:
+  # Note tag style values: // note提示块风格
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
+  style: simple
+  icons: true  // 是否显示icon
+  border_radius: 3 // 圆角
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0
+```
+2. 使用方法
+共有六种note提示标签：default,primary,success,info,warning,danger
+```
+{% note [notename] %}
+提示块标签
+{% endnote %}
+```
+{% note info %}
+示例：咱就是 info 提示块标签
+{% endnote %}
 
 
+### 十四.开启选项卡
+1. 主题_config.yml配置文件设置选项卡
+```
+# Tabs tag.
+tabs:
+  enable: true  // 开启功能
+  transition:
+    tabs: true
+    labels: true
+  border_radius: 3  // 设置选项卡圆角
+```
+2. 使用方法
+```
+{% tabs tab,1 %} 名字为tab，默认在第1个选项卡，如果是-1则隐藏
 
+<!-- tab -->
+**选项卡 1** 
+<!-- endtab -->
 
+<!-- tab -->
+**选项卡 2**
+<!-- endtab -->
 
+{% endtabs %}
+```
+
+{% tabs 俺是选项卡,1 %}
+
+<!-- tab -->
+😘
+<!-- endtab -->
+
+<!-- tab -->
+✋
+<!-- endtab -->
+
+{% endtabs %}
 
 
 
