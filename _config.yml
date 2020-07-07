@@ -78,7 +78,7 @@ pagination_dir: page
 # Extensions
 Plugins: hexo-generate-feed
 ## Themes: https://hexo.io/themes/
-theme: cactus
+theme: next
 # Security
 ##
 encrypt:
