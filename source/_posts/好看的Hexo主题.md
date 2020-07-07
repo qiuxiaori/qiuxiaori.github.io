@@ -6,6 +6,8 @@ categories: hexo
 
 https://hexo.io/themes/
 
+<!--more-->
+
 ## 一.ocean
 https://github.com/zhwangart/hexo-theme-ocean
 
