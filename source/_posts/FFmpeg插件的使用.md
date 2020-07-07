@@ -67,9 +67,9 @@ console.log(video.info_configuration); // FFmpeg configuration
 console.log('Error: ' + err);
 });
 
-````
+```
 
-## video对象方法
+### video对象方法
 video对象预设一组方法，可以独立于预设配置进行独立操作。
 1. **video.fnExtractSoundToMP3(destionationFileName，callback)**
 这个方法会把视频的音频流提取为mp3文件。
