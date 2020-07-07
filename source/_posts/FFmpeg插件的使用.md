@@ -8,9 +8,9 @@ categories: 编程技术
 
 <!--more-->
 
-当你发现，，实际开发中会有各种各样奇怪的需求，上传文件之类的都算是小事情了，从视频中截取帧这种，，也只能想办法实现了 😢。幸好 node 的插件库很丰富，ffmpeg 这款插件就可以满足我们对视频操作的一些基本需求，据我简单分析，插件应该是调用了 node 子进程模块的 excu()方法，直接调用了 ffmpeg 软件的控制台命令，对于其他插件没有提供的方法可以参照这个思路实现。
+ffmpeg 这款插件就可以满足我们对视频操作的一些基本需求，插件应该是调用了 node 子进程模块的 excu()方法，直接调用了 ffmpeg 软件的控制台命令，对于其他插件没有提供的方法可以参照这个思路自己实现。
 
-### 一.安装 ffmpeg
+# 一.安装 ffmpeg
 
 1. 安装 ffmpeg 软件
    使用 ffmpeg 插件首先需要电脑有 ffmpeg 软件环境，安装 ffmpeg 需要 brew 环境。
@@ -53,9 +53,9 @@ categories: 编程技术
   });
 ````
 
-### 二.Video 对象
+# 二.Video 对象
 
-#### video 对象属性
+## video 对象属性
 
 每次创建新实例时，此库都会提供一个新对象来检索视频信息，ffmpeg 配置以及进行必要转换的所有方法：```js
 var process = new ffmpeg('/path/to/your_movie.avi');
@@ -69,7 +69,7 @@ console.log('Error: ' + err);
 
 ````
 
-#### video对象方法
+## video对象方法
 video对象预设一组方法，可以独立于预设配置进行独立操作。
 1. **video.fnExtractSoundToMP3(destionationFileName，callback)**
 这个方法会把视频的音频流提取为mp3文件。
