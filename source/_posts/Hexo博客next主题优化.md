@@ -8,7 +8,7 @@ categories:
 ---
 
 > 搭建好 hexo 博客后陆陆续续试用了几个主题，但是功能都不是很强大，最后我还是选择了集成服务较多，生态较好的[Next](https://theme-next.iissnan.com/)主题。
-
+https://theme-next.iissnan.com/theme-settings.html
 <!--more-->
 
 ### 主题安装
@@ -289,7 +289,9 @@ tabs:
 
 {% endtabs %}
 
+### 十五.本地搜索
 
+见 [官网](https://theme-next.iissnan.com/third-party-services.html#local-search)
 
 
 
