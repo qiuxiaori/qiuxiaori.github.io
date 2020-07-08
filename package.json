@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "git add . && git commit -m 'update'  && git push origin hexo -f && hexo clean && hexo d -g"
+    "build": "git add . && git commit -m 'update' && git push origin hexo -f && hexo clean && hexo d -g",
+    "pub": "hexo clean && hexo d -g"
   },
   "hexo": {
     "version": "3.9.0"
