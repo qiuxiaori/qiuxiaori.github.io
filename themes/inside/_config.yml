@@ -318,7 +318,7 @@ data_prefix:
 data_dir:
 
 # Favicon, default to `favicon.ico`
-favicon: images/追追剧.png
+favicon: https://user-images.githubusercontent.com/46962944/87913017-f871b100-caa0-11ea-88f1-f8bec987c616.png
 
 # Google analytics
 # ga: UA-00000000-0
