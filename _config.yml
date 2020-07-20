@@ -100,5 +100,5 @@ theme: inside
 
 deploy:
   type: git
-  repo: git@github.com:qiuxiaori/qiuxiaori.github.io.git
+  repo: git@github.com:qiuxiaori/qiuxiaori.github.io
   branch: master
