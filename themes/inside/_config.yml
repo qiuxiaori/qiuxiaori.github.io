@@ -110,7 +110,7 @@ sns:
   # and the theme will try to get `hexo.config.feed.path`.
   feed:
   github: https://github.com/qiuxiaori
-  twitter:
+  twitter: https://twitter.com/qiuxiaori
   facebook:
   instagram:
   tumblr:
