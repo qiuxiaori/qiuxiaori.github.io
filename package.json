@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "hexo clean && hexo d -g && git add . && git commit -m 'update' && git push origin inside -f",
+    "build": "hexo clean && hexo d -g && git add . && git commit -m 'update' && git push -f",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server"
