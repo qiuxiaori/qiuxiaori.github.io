@@ -1,8 +1,9 @@
-
 ---
 title: 每天一个 vscode 小技巧
 tags: vscode
+categories: 工具
 ---
+
 又学会了没用的知识呢..
 <!-- more -->
 ### 一.mac终端用vscode打开文件
