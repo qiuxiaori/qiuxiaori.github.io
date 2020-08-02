@@ -1,7 +1,7 @@
 ---
 title: node.js游戏服务器框架pomelo初试
 tags: pomelo
-categories: 游戏开发
+categories: 编程技术
 ---
 
 > pomelo之所以简单易用、功能全面，并且具有高可扩展性、可伸缩性等特点，这与它的技术选型和方案设计是密不可分的。在研究大量游戏引擎设计思路基础上，结合以往游戏开发的经验，确定了pomelo框架的设计方案。
