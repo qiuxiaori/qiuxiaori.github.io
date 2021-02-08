@@ -3,11 +3,8 @@ title: log4js实战
 categories: 编程技术
 ---
 
-工作啦这么久，终于有机会自己从头搭日志啦，开心～
-用的是 log4js 包
-<!-- more -->
+####
 
-#### 
 ```
 import { configure, getLogger } from 'log4js'
 import { create } from '../daos/logger'
