@@ -1,58 +1,62 @@
 ---
 title: powershell美化
 tags: powershell
-categories: 工具
+categories: 编程技术
 ---
 
 ### 一.字体
 
-> powershell对字体的要求hin严格，只有更纱黑体这一等宽字体支持 PowerShell 下使用中文。
+> powershell 对字体的要求 hin 严格，只有更纱黑体这一等宽字体支持 PowerShell 下使用中文。
 
-* 地址：[github](https://link.zhihu.com/?target=https%3A//github.com/be5invis/Sarasa-Gothic/releases)
+- 地址：[github](https://link.zhihu.com/?target=https%3A//github.com/be5invis/Sarasa-Gothic/releases)
 
-* 安装：下载解压后复制解压的内容粘贴到目录 C:\Windows\Fonts 即可安装
+- 安装：下载解压后复制解压的内容粘贴到目录 C:\Windows\Fonts 即可安装
 
-* 使用：打开 PowerShell 右键页面顶部 -> 属性 -> 字体 选择并确定
+- 使用：打开 PowerShell 右键页面顶部 -> 属性 -> 字体 选择并确定
 
 ### 二.配色
 
 > 微软官方提供了更换 PowerShell 配色的工具：ColorTool.exe，该工具支持 iTerm 主题(以 .itermcolors 结尾的主题文件)。
 
-* 安装
-  * 使用scoop包管理工具：
-    * 执行`scoop install colortool`即可。没有scoop环境的本站[scoop教程](./工具/scoop.md)
+- 安装
 
-  * github下载安装：
+  - 使用 scoop 包管理工具：
+
+    - 执行`scoop install colortool`即可。没有 scoop 环境的本站[scoop 教程](./工具/scoop.md)
+
+  - github 下载安装：
     [地址](https://github.com/Microsoft/console/releases),解压后在解压路径执行`colortool -b campbell`应用环境变量。
 
-* 查看已安装的主题: `colortool -s`
+- 查看已安装的主题: `colortool -s`
 
-* 预览配色：`colortool [schmea name]` 如 `colortool cmd-legacy.ini`
+- 预览配色：`colortool [schmea name]` 如 `colortool cmd-legacy.ini`
 
-* 保存配色：powershell 顶部右键 -> 属性 -> 确定 就能保存预览的配色方案啦。
+- 保存配色：powershell 顶部右键 -> 属性 -> 确定 就能保存预览的配色方案啦。
 
-* 更多主题：
-  * 在[iterm2colorschemes](https://iterm2colorschemes.com/)找到喜欢的主题
-  * 点击主题将打开的页面的内容复制下来
-  * 新建 .itermcolors 文件：
-    * 在安装目录(scoop安装) C:\Users\username\scoop\apps\colortool\current\schemes 目录新建同名主题文件，内容粘贴进去
-  * 执行 `colortool [schmea name]` 并保存主题即可
+- 更多主题：
+  - 在[iterm2colorschemes](https://iterm2colorschemes.com/)找到喜欢的主题
+  - 点击主题将打开的页面的内容复制下来
+  - 新建 .itermcolors 文件：
+    - 在安装目录(scoop 安装) C:\Users\username\scoop\apps\colortool\current\schemes 目录新建同名主题文件，内容粘贴进去
+  - 执行 `colortool [schmea name]` 并保存主题即可
 
 ### 三.主题
 
-> 咱也没用过linux，听说oh-my-posh很好用，windows有个差不多的，咱们就把它拿来用用。
+> 咱也没用过 linux，听说 oh-my-posh 很好用，windows 有个差不多的，咱们就把它拿来用用。
 
-* github地址： [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)
+- github 地址： [oh-my-posh](https://github.com/JanDeDobbeleer/oh-my-posh)
 
-* 管理员模式启动 PowerShell
+- 管理员模式启动 PowerShell
 
-* 安装模块
+- 安装模块
+
 ```js
 Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser
 ```
 
-* 新增修改配置文件
+- 新增修改配置文件
+
 ```js
 // 如果之前没有配置文件，就新建一个 PowerShell 配置文件
 if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
@@ -61,13 +65,14 @@ if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
 notepad $PROFILE
 ```
 
-* 添加内容
+- 添加内容
+
 ```js
 Import-Module posh-git
 Import-Module oh-my-posh
 Set-Theme Paradox // 主题名
 ```
 
-* 执行命令 `Set-Culture en-US` 将终端设置为英文环境，避免乱码
+- 执行命令 `Set-Culture en-US` 将终端设置为英文环境，避免乱码
 
-* 修改文件中的主题名为自己想要的主题更换主题
+- 修改文件中的主题名为自己想要的主题更换主题

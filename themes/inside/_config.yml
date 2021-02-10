@@ -22,7 +22,7 @@ appearance:
   # 'url(//www.toptal.com/designers/subtlepatterns/patterns/confectionary.png) #f5f7fa'
 
   # Maximum width of content
-  content_width: 640
+  content_width: 720
 
   # Fonts
   font:
@@ -118,14 +118,14 @@ menu:
 # Try to sort by changing the order of the keys
 sns:
   # `email` will fallback to `profile.email` if not specified
-  email:
+  # email:
   # If you use hexo-generator-feed, `sns.feed` can be left blank
   # and the theme will try to get `hexo.config.feed.path`.
-  feed:
+  # feed:
   github: https://github.com/qiuxiaori
   twitter: https://twitter.com/qiuxiaori
   facebook:
-  instagram:
+  instagram: https://www.instagram.com/qiuxiaori/
   tumblr:
   dribbble:
   telegram:
@@ -163,14 +163,14 @@ page:
   toc: true
 
   # Display reward, default to `false`
-  # reward: true
+  reward: true
 
   # Display copyright notice, default to `false`
   copyright: true
 
 # Post
 post:
-  per_page: 10
+  per_page: 12
 
   # The following settings are the same as the page
   toc: true
