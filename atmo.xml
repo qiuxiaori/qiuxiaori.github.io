@@ -6,7 +6,7 @@
   <link href="http://qiuxiaori.github.com/atmo.xml" rel="self"/>
   
   <link href="http://qiuxiaori.github.com/"/>
-  <updated>2020-11-10T03:03:31.445Z</updated>
+  <updated>2021-02-10T05:50:44.268Z</updated>
   <id>http://qiuxiaori.github.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>好康的</title>
+    <link href="http://qiuxiaori.github.com/2021/02/10/food/"/>
+    <id>http://qiuxiaori.github.com/2021/02/10/food/</id>
+    <published>2021-02-10T05:17:56.209Z</published>
+    <updated>2021-02-10T05:50:44.268Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="cj-子">CJ 子<a title="#cj-子" href="#cj-子"></a></h3><p><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/6.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/5.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/7.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/8.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/9.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/10.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/11.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/12.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/13.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/14.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/15.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/16.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/17.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/18.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/19.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/20.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/21.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/22.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/23.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/24.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/25.jpeg" alt=""></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;cj-子&quot;&gt;CJ 子&lt;a title=&quot;#cj-子&quot; href=&quot;#cj-子&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/6.jpeg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+&lt;img src=&quot;.</summary>
+      
+    
+    
+    
+    <category term="照片子" scheme="http://qiuxiaori.github.com/categories/%E7%85%A7%E7%89%87%E5%AD%90/"/>
+    
+    
+    <category term="私" scheme="http://qiuxiaori.github.com/tags/%E7%A7%81/"/>
+    
+  </entry>
   
   <entry>
     <title>每天一个 iterm2 小技巧</title>
@@ -445,45 +471,18 @@
     <link href="http://qiuxiaori.github.com/2020/07/20/windows%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8scoop%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
     <id>http://qiuxiaori.github.com/2020/07/20/windows%E5%8C%85%E7%AE%A1%E7%90%86%E5%99%A8scoop%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
     <published>2020-07-20T07:05:18.551Z</published>
-    <updated>2020-07-20T07:05:18.551Z</updated>
+    <updated>2021-02-10T06:15:13.369Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="环境要求">环境要求<a title="#环境要求" href="#环境要求"></a></h3><ul><li>windows系统不低于windows7</li><li>powershell版本不低于powershell3</li><li>windows用户名为英文</li></ul><h3 id="允许本地脚本执行">允许本地脚本执行<a title="#允许本地脚本执行" href="#允许本地脚本执行"></a></h3><ul><li>打开powershell输入 <code>set-executionpolicy remotesigned -scope currentuser</code></li><li>确认执行<br><img src="../images/2020022801.png" alt="confirm"></li></ul><h3 id="安装使用">安装使用<a title="#安装使用" href="#安装使用"></a></h3><ul><li>执行命令 <code>iex (new-object net.webclient).downloadstring('https://get.scoop.sh')</code></li><li>查看帮助 <code>scoop help</code></li><li>常用命令</li></ul><div class="φcy"><div class="φda"><table><thead><tr><th style="text-align:left">动作</th><th style="text-align:left">描述</th></tr></thead><tbody><tr><td style="text-align:left">search</td><td style="text-align:left">搜索软件名</td></tr><tr><td style="text-align:left">install</td><td style="text-align:left">安装软件</td></tr><tr><td style="text-align:left">update</td><td style="text-align:left">更新软件</td></tr><tr><td style="text-align:left">status</td><td style="text-align:left">查看软件状态</td></tr><tr><td style="text-align:left">uninstall</td><td style="text-align:left">卸载软件</td></tr><tr><td style="text-align:left">info</td><td style="text-align:left">查看软件详情</td></tr><tr><td style="text-align:left">home</td><td style="text-align:left">打开软件主页</td></tr></tbody></table></div></div>]]></content>
+    <content type="html"><![CDATA[<h3 id="环境要求">环境要求<a title="#环境要求" href="#环境要求"></a></h3><ul><li>windows 系统不低于 windows7</li><li>powershell 版本不低于 powershell3</li><li>windows 用户名为英文</li></ul><h3 id="允许本地脚本执行">允许本地脚本执行<a title="#允许本地脚本执行" href="#允许本地脚本执行"></a></h3><ul><li>打开 powershell 输入 <code>set-executionpolicy remotesigned -scope currentuser</code></li><li>确认执行<br><img src="../images/2020022801.png" alt="confirm"></li></ul><h3 id="安装使用">安装使用<a title="#安装使用" href="#安装使用"></a></h3><ul><li>执行命令 <code>iex (new-object net.webclient).downloadstring('https://get.scoop.sh')</code></li><li>查看帮助 <code>scoop help</code></li><li>常用命令</li></ul><div class="φcy"><div class="φda"><table><thead><tr><th style="text-align:left">动作</th><th style="text-align:left">描述</th></tr></thead><tbody><tr><td style="text-align:left">search</td><td style="text-align:left">搜索软件名</td></tr><tr><td style="text-align:left">install</td><td style="text-align:left">安装软件</td></tr><tr><td style="text-align:left">update</td><td style="text-align:left">更新软件</td></tr><tr><td style="text-align:left">status</td><td style="text-align:left">查看软件状态</td></tr><tr><td style="text-align:left">uninstall</td><td style="text-align:left">卸载软件</td></tr><tr><td style="text-align:left">info</td><td style="text-align:left">查看软件详情</td></tr><tr><td style="text-align:left">home</td><td style="text-align:left">打开软件主页</td></tr></tbody></table></div></div>]]></content>
     
     
       
       
     <summary type="html">&lt;h3 id=&quot;环境要求&quot;&gt;环境要求&lt;a title=&quot;#环境要求&quot; href=&quot;#环境要求&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;windows系统不低于windows7&lt;/li&gt;
-&lt;li&gt;powershell版本不低于powershell3&lt;/li&gt;
-&lt;li&gt;windows</summary>
-      
-    
-    
-    
-    <category term="工具" scheme="http://qiuxiaori.github.com/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="scoop" scheme="http://qiuxiaori.github.com/tags/scoop/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm包开发</title>
-    <link href="http://qiuxiaori.github.com/2020/07/20/npm%E5%8C%85%E5%BC%80%E5%8F%91/"/>
-    <id>http://qiuxiaori.github.com/2020/07/20/npm%E5%8C%85%E5%BC%80%E5%8F%91/</id>
-    <published>2020-07-20T07:05:18.550Z</published>
-    <updated>2020-07-20T07:05:18.550Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="一.-配置eslint">一. 配置eslint<a title="#一.-配置eslint" href="#一.-配置eslint"></a></h4><ul><li>安装eslint: <code>npm i eslint -g</code></li><li>初始化eslint配置: <code>eslint --init</code> 生成 .eslintrc.js 文件</li><li>忽略目录校验: 创建 .eslintignore.js 文件把不需要校验的目录放进去</li><li>配置scripts: 在 package.json 文件中添加scripts命令,<code>&quot;lint&quot;: &quot;eslint --fix -src&quot;</code></li></ul><h4 id="二.-编写代码">二. 编写代码<a title="#二.-编写代码" href="#二.-编写代码"></a></h4><ul><li>在src目录下编写代码</li></ul><h4 id="三.-babel编译">三. babel编译<a title="#三.-babel编译" href="#三.-babel编译"></a></h4><blockquote><p>在低版本的 node 可能还不支持某些 es6 语法，比如对象解构等，所以需要使用 babel 编译成低版本也能识别的语法。<br>我们把 src 目录里的代码编译到 lib 目录，然后我们在 package.json 里，把 “main” 改为 “lib/index.js”，这样对外暴露出去的代码就不会出现兼容性问题。</p></blockquote><ul><li>安装babel依赖： <code>npm install --save-dev babel-cli</code></li><li>下载预设：<code>npm install --save-dev babel-preset-es2015</code></li><li>配置 .babelrc 文件:</li></ul><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"presets"</span>: [<span class="string">"es2015"</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li>配置 scripts:</li></ul><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line">"scripts": &#123;</span><br><span class="line">  "build": "babel src -d lib",</span><br><span class="line">  "build:watch": "npm run build -- --watch"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="四.-编写测试">四. 编写测试<a title="#四.-编写测试" href="#四.-编写测试"></a></h4><h4 id="五.-持续集成">五. 持续集成<a title="#五.-持续集成" href="#五.-持续集成"></a></h4><h4 id="六.-发布">六. 发布<a title="#六.-发布" href="#六.-发布"></a></h4><ul><li>注册npm账号并验证</li><li>添加npm用户信息,执行<code>npm adduser</code>命令输入用户名和密码</li><li>发布 <code>npm publish</code></li></ul><h4 id="七.-版本升级">七. 版本升级<a title="#七.-版本升级" href="#七.-版本升级"></a></h4><ul><li>升级补丁版本号：<code> npm version patch</code></li><li>升级小版本号：<code>npm version minor</code></li><li>升级大版本号：<code>npm version major</code></li></ul><h4 id="八.-删除包">八. 删除包<a title="#八.-删除包" href="#八.-删除包"></a></h4><ul><li>删除已发布的包: <code>npm unpublish [packageName] -force</code></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h4 id=&quot;一.-配置eslint&quot;&gt;一. 配置eslint&lt;a title=&quot;#一.-配置eslint&quot; href=&quot;#一.-配置eslint&quot;&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;安装eslint: &lt;code&gt;npm i eslint -g&lt;/code&gt;&lt;/li&gt;
-&lt;</summary>
+&lt;li&gt;windows 系统不低于 windows7&lt;/li&gt;
+&lt;li&gt;powershell 版本不低于 powershell3&lt;/li&gt;
+&lt;li&gt;win</summary>
       
     
     
@@ -491,7 +490,7 @@
     <category term="编程技术" scheme="http://qiuxiaori.github.com/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="npm" scheme="http://qiuxiaori.github.com/tags/npm/"/>
+    <category term="scoop" scheme="http://qiuxiaori.github.com/tags/scoop/"/>
     
   </entry>
   
