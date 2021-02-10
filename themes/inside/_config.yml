@@ -5,9 +5,9 @@
 # Appearance
 appearance:
   # Accent color, default '#2a2b33'
-  accent_color: '#8e80de'
+  accent_color: "#8e80de"
   # Font color, default '#363636'
-  foreground_color: 
+  foreground_color:
   # Border color, default '#e0e0e0'
   # border_color: '#BDCFEE'
   # body background, default '#f5f7fa'
@@ -59,12 +59,25 @@ appearance:
   # highlight:
 
   # Default Light by Chris Kempson (http://chriskempson.com)
-  highlight: [
-    '#f8f8f8', '#e8e8e8', '#d8d8d8', '#b8b8b8',
-    '#585858', '#383838', '#282828', '#181818',
-    '#ab4642', '#dc9656', '#f7ca88', '#a1b56c',
-    '#86c1b9', '#7cafc2', '#ba8baf', '#a16946'
-  ]
+  highlight:
+    [
+      "#f8f8f8",
+      "#e8e8e8",
+      "#d8d8d8",
+      "#b8b8b8",
+      "#585858",
+      "#383838",
+      "#282828",
+      "#181818",
+      "#ab4642",
+      "#dc9656",
+      "#f7ca88",
+      "#a1b56c",
+      "#86c1b9",
+      "#7cafc2",
+      "#ba8baf",
+      "#a16946",
+    ]
 
   # Harmonic16 Light by Jannik Siebert (https://github.com/janniks)
   # highlight: [
@@ -91,7 +104,7 @@ profile:
   # You can set Avatar URL directly
   avatar: https://pic1.zhimg.com/v2-e62a104c7115a03f2a3e3bbc6dab16ce_xll.jpg
 
-  bio: 'Some birds don’t mean to be caged . Their feathers are just too bright. And when they fly away, the part of you that knows it was a sin to lock them up.'
+  bio: "Some birds don’t mean to be caged . Their feathers are just too bright. And when they fly away, the part of you that knows it was a sin to lock them up."
 
 # Sidebar navigation links
 menu:
@@ -140,7 +153,6 @@ footer:
   # custom: Hosted by <a target="_blank" rel="external nofollow"
   #   href="https://pages.github.com/"><b>Github Pages</b></a>
 
-
 # ---------------------------------------------------------------
 # Content
 # ---------------------------------------------------------------
@@ -155,7 +167,6 @@ page:
 
   # Display copyright notice, default to `false`
   copyright: true
-
 
 # Post
 post:
@@ -224,7 +235,6 @@ search:
   #     title: _snippetResult.title.value
   #     # Used to retrieve content from per hit
   #     content: _snippetResult.content.value
-
 
 # ---------------------------------------------------------------
 # Content addons
@@ -301,7 +311,6 @@ comments:
   #   # Autoload, default to `true`, set to `false` to display a button
   #   autoload: false
 
-
 # ---------------------------------------------------------------
 # Misc
 # ---------------------------------------------------------------
@@ -318,7 +327,7 @@ data_prefix:
 data_dir:
 
 # Favicon, default to `favicon.ico`
-favicon: https://user-images.githubusercontent.com/46962944/87913017-f871b100-caa0-11ea-88f1-f8bec987c616.png
+favicon: /images/favicon.png
 
 # Google analytics
 # ga: UA-00000000-0
@@ -379,7 +388,6 @@ pwa:
   #     - src: icon-144x144.png
   #       sizes: 144x144
   #       type: image/png
-
 # Plugins
 # Inject html snippet to a specified position, Or global inject scripts/styles.
 # The code will take advantage of babel, uglifyjs and html-minifier if possible.
