@@ -6,7 +6,7 @@
   <link href="http://qiuxiaori.github.com/atmo.xml" rel="self"/>
   
   <link href="http://qiuxiaori.github.com/"/>
-  <updated>2021-05-21T11:04:50.447Z</updated>
+  <updated>2021-05-23T17:12:22.373Z</updated>
   <id>http://qiuxiaori.github.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《HTTP权威指南》笔记（1）</title>
+    <link href="http://qiuxiaori.github.com/2021/05/24/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%20HTTP/"/>
+    <id>http://qiuxiaori.github.com/2021/05/24/%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%20%20HTTP/</id>
+    <published>2021-05-23T17:07:05.575Z</published>
+    <updated>2021-05-23T17:12:22.373Z</updated>
+    
+    <content type="html"><![CDATA[<p>最初设计 MIME (Multipurpose Internet Mail Ex</p><!--readmore--><h2 id="第一部分--http">第一部分  HTTP<a title="#第一部分--http" href="#第一部分--http"></a></h2><h3 id="一.媒体类型">一.媒体类型<a title="#一.媒体类型" href="#一.媒体类型"></a></h3><p>最初设计 MIME (Multipurpose Internet Mail Extension，多用途因特网邮件扩展)是为了解决在不同 的电子邮件系统之间搬移报文时存在的问题。</p><!--readmore--><p>当 Web 浏览器从服务器中取回一个对象时，会去查看相关的 MIME 类型，看看它是否知道 应该如何处理这个对象。</p><p>MIME 类型是一种文本标记，表示一种主要的对象类型和一个特定的子类型，中间</p><p>由一条斜杠来分隔。</p><ul><li>HTML 格式的文本文档由 text/html 类型来标记。</li><li>普通的 ASCII 文本文档由 text/plain 类型来标记。</li><li>JPEG 格式的图片为 image/jpeg 类型。</li><li>GIF 格式的图片为 image/gif 类型。</li><li>Apple 的 QuickTime 电影为 video/quicktime 类型。</li><li>微软的 PowerPoint 演示文件为 application/vnd.ms-powerpoint 类型。</li></ul><h3 id="二.-url">二. URL<a title="#二.-url" href="#二.-url"></a></h3><ol><li><p>定义</p><p>统一资源定位符(URL)是资源标识符最常见的形式。URL 描述了一台特定服务器上某资源的特定位置。它们可以明确说明如何从一个精确、固定的位置获取资源。</p></li><li><p>格式</p><p>大多数 URL 方案的 URL 语法都建立在这个由 9 部分构成的通用格式上:</p><p><code>&lt;scheme&gt;://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/&lt;path&gt;;&lt;params&gt;?&lt;query&gt;#&lt;frag&gt;</code></p></li><li><p>自动拓展URL</p><ul><li><p>主机名扩展:在主机名扩展中，只要有些小提示，浏览器通常就可以在没有帮助的情况下，将 你输入的主机名扩展为完整的主机名。</p></li><li><p>历史扩展:浏览器用来节省用户输入 URL 时间的另一种技巧是，将以前用户访问过的 URL 历史存储起来</p></li></ul></li><li><p>浏览器通常会用其他应用程序来处理特殊的资源。比如，Internet Explorer 就启动了一个 E-mail 应用 程序来处理那些表示 E-mail 资源的 URL。</p></li><li><p>URL字符集</p><p>URL 集成了转义序列。通过转义序列，就可以用 US-ASCII 字符集的 有限子集对任意字符值或数据进行编码了，这样就实现了可移植性和完整性。编码机制是通过一种“转义”表示法来表示不安全字符的，这种转义表示法包含一个百分号(%)，后面跟着两个表示字符 ASCII 码的 十六进制数。</p><img src="/Users/mac/Library/Application Support/typora-user-images/image-20210522221654434.png" alt="image-20210522221654434" style="zoom:50%;" /></li></ol><h3 id="三.-方法">三. 方法<a title="#三.-方法" href="#三.-方法"></a></h3><h4 id="3.1-常用方法">3.1 常用方法<a title="#3.1-常用方法" href="#3.1-常用方法"></a></h4><ul><li><p>get</p></li><li><p>post</p></li><li><p>put</p><p>PUT方法也改变了资源的状态，所以是 <strong>非安全</strong> 的。但是和POST不同，它是 <strong>幂等</strong> 的。</p></li><li><p>delete</p><p>DELETE 方法所做的事情就是请服务器删除请求 URL 所指定的资源。 但是，客户端应用程序无法保证删除操作一定会被执行。</p></li><li><p>options</p><p><strong>OPTIONS 方法请求 Web 服务器告知其支持的各种功能</strong>。可以询问服务器通常支持哪些方法，或者对某些特殊资源支持哪些方法。(有些服务器可能只支持对一些特殊类型的对象使用特定的操作)。</p><p>通过使用 OPTIONS，客户端可以在与服务器进行交互之前，确定服务器的能力，这样它就可以更方便地与具备不同特性的代理和服务器进行互操作了。</p><p>这为客户端应用程序提供了一种手段，使其不用实际访问那些资源就能判定访问各种资源的最优方式。</p><p><strong>响应：</strong> Allow 实体首部字段列出了请求 URI 标识的资源所支持的方法列表，如果请求 URI为 * 的话，列出的就是整个服务器所支持的方法列表。</p></li><li><p>head</p><p>HEAD 方法与 GET 方法的行为很类似，但服务器在响应中只返回首部。不会返回实体的主体部分。这就允许客户端在未获取实际资源的情况下，对资源的首部进行检查。使用 HEAD，可以:</p><p>​a. 在不获取资源的情况下了解资源的情况(比如，判断其类型);</p><p>​b. 通过查看响应中的状态码，看看某个对象是否存在;</p><p>​c. 通过查看首部，测试资源是否被修改了。</p></li><li><p>trace</p><p>TRACE 请求会在目的服务器端发起一个 <code>环回</code> 诊断。行程最后一站的服务器会弹回一条 TRACE 响应，并在响应主体中携带它收到的原始请求报文。这样客户端就可以查看在所有中间 HTTP 应用程序组成的请求 / 响应链上，原始报文是否，以及如何被毁坏或修改过。</p></li><li><p>connect</p><p>CONNECT方法是HTTP/1.1协议预留的，能够将连接改为管道方式的代理服务器。通常用于SSL加密服务器的链接与非加密的HTTP代理服务器的通信。</p></li></ul><h4 id="3.2-安全性与幂等性">3.2 安全性与幂等性<a title="#3.2-安全性与幂等性" href="#3.2-安全性与幂等性"></a></h4><div class="φcy"><div class="φda"><table><thead><tr><th style="padding:0"></th><th style="padding:0"></th><th style="padding:0"></th></tr></thead><tbody><tr><td style="text-align:left">HTTP Method</td><td style="text-align:left">Idempotent</td><td style="text-align:left">Safe</td></tr><tr><td style="text-align:left">OPTIONS</td><td style="text-align:left">yes</td><td style="text-align:left">yes</td></tr><tr><td style="text-align:left">GET</td><td style="text-align:left">yes</td><td style="text-align:left">yes</td></tr><tr><td style="text-align:left">HEAD</td><td style="text-align:left">yes</td><td style="text-align:left">yes</td></tr><tr><td style="text-align:left">PUT</td><td style="text-align:left">yes</td><td style="text-align:left">no</td></tr><tr><td style="text-align:left">POST</td><td style="text-align:left">no</td><td style="text-align:left">no</td></tr><tr><td style="text-align:left">DELETE</td><td style="text-align:left">yes</td><td style="text-align:left">no</td></tr><tr><td style="text-align:left">PATCH</td><td style="text-align:left">no</td><td style="text-align:left">no</td></tr></tbody></table></div></div><h3 id="四.-状态码">四. 状态码<a title="#四.-状态码" href="#四.-状态码"></a></h3><p>表3-7 成功状态码和原因短语</p><p>状态码 原因短语</p><ol><li>200  OK</li><li>201  Created</li><li>202  Accepted</li><li>203  Non-Authoritative Information</li><li>204  No Content</li><li>205  Reset Content</li><li>206  Partial Content</li></ol><p>含  义</p><p>请求没问题，实体的主体部分包含了所请求的资源</p><p>用于创建服务器对象的请求(比如，PUT)。响应的实体主体部分中 应该包含各种引用了已创建的资源的 URL，Location 首部包含的 则是最具体的引用。更多有关 Location 首部的信息参见表 3-21。 服务器必须在发送这个状态码之前创建好对象</p><p>请求已被接受，但服务器还未对其执行任何动作。不能保证服务器会 完成这个请求;这只是意味着接受请求时，它看起来是有效的。 服务器应该在实体的主体部分包含对请求状态的描述，或许还应该有 对请求完成时间的估计(或者包含一个指针，指向可以获取此信息的 位置)</p><p>实体首部(更多有关实体首部的信息参见 3.5.4 节)包含的信息不是 来自于源端服务器，而是来自资源的一份副本。如果中间节点上有一 份资源副本，但无法或者没有对它所发送的与资源有关的元信息(首 部)进行验证，就会出现这种情况。 这种响应码并不是非用不可的;如果实体首部来自源端服务器，响应 为 200 状态的应用程序就可以将其作为一种可选项使用</p><p>响应报文中包含若干首部和一个状态行，但没有实体的主体部分。主 要用于在浏览器不转为显示新文档的情况下，对其进行更新(比如刷 新一个表单页面)</p><p>另一个主要用于浏览器的代码。负责告知浏览器清除当前页面中的所 有 HTML 表单元素</p><p>成功执行了一个部分或 Range(范围)请求。稍后我们会看到，客 户端可以通过一些特殊的首部来获取部分或某个范围内的文档——这 个状态码就说明范围请求成功了。更多有关 Range 首部的内容参见 15.9 节。</p><p>206 响应中必须包含 Content-Range、Date 以及 ETag 或 Content- Location 首部</p><p>3.4.3 300~399——重定向状态码</p><p>重定向状态码要么告知客户端使用替代位置来访问他</p><p>表3-10 服务器错误状态码及原因短语</p><p>状态码</p><p>500 501</p><p>原因短语</p><p>Internal Server Error Not Implemented</p><p>含  义</p><p>服务器遇到一个妨碍它为请求提供服务的错误时，使用此状态码</p><p>客户端发起的请求超出服务器的能力范围(比如，使用了服务器不 支持的请求方法)时，使用此状态码</p><p>HTTP报文 | 69</p><p>(续)</p><p>66</p><p>状态码 原因短语</p><ol><li>502  Bad Gateway</li><li>503  Service Unavailable</li><li>504  Gateway Timeout</li><li>505  HTTP Version Not Supported</li></ol><p>3.5 首部</p><p>含  义</p><p>作为代理或网关使用的服务器从请求响应链的下一条链路上收到了 一条伪响应(比如，它无法连接到其父网关)时，使用此状态码</p><p>用来说明服务器现在无法为请求提供服务，但将来可以。如果服务 器知道什么时候资源会变为可用的，可以在响应中包含一个 Retry- After 首部。更多有关 Retry-After 首部的信息请参见 3.5.3 节</p><p>与状态码 408 类似，只是这里的响应来自一个网关或代理，它们在 等待另一服务器对其请求进行响应时超时了</p><p>服务器收到的请求使用了它无法或不愿支持的协议版本时，使用此 状态码。有些服务器应用程序会选择不支持协议的早期版本</p><h3 id="五.-其他应用程序">五. 其他应用程序<a title="#五.-其他应用程序" href="#五.-其他应用程序"></a></h3><ol><li>代理</li><li>缓存</li><li>网关</li><li>隧道</li><li>Agent代理</li></ol><h3 id="6.-首部字段">6. 首部字段<a title="#6.-首部字段" href="#6.-首部字段"></a></h3><h4 id="6.1-通用首部">6.1 通用首部<a title="#6.1-通用首部" href="#6.1-通用首部"></a></h4><h4 id="6.2-请求首部">6.2 请求首部<a title="#6.2-请求首部" href="#6.2-请求首部"></a></h4><h4 id="6.3-响应首部">6.3 响应首部<a title="#6.3-响应首部" href="#6.3-响应首部"></a></h4><h4 id="6.4-实体首部">6.4 实体首部<a title="#6.4-实体首部" href="#6.4-实体首部"></a></h4><h4 id="6.5-拓展首部">6.5 拓展首部<a title="#6.5-拓展首部" href="#6.5-拓展首部"></a></h4>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最初设计 MIME (Multipurpose Internet Mail Ex&lt;/p&gt;
+&lt;!--readmore--&gt;
+&lt;h2 id=&quot;第一部分--http&quot;&gt;第一部分  HTTP&lt;a title=&quot;#第一部分--http&quot; href=&quot;#第一部分--http&quot;&gt;&lt;/a&gt;</summary>
+      
+    
+    
+    
+    <category term="编程技术" scheme="http://qiuxiaori.github.com/categories/%E7%BC%96%E7%A8%8B%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="http" scheme="http://qiuxiaori.github.com/tags/http/"/>
+    
+  </entry>
   
   <entry>
     <title>能看的Hexo主题</title>
@@ -468,32 +494,6 @@
     
     
     <category term="http" scheme="http://qiuxiaori.github.com/tags/http/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>好康的</title>
-    <link href="http://qiuxiaori.github.com/2021/05/21/food/"/>
-    <id>http://qiuxiaori.github.com/2021/05/21/food/</id>
-    <published>2021-05-21T11:04:50.430Z</published>
-    <updated>2021-05-21T11:04:50.431Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="cj-子">CJ 子<a title="#cj-子" href="#cj-子"></a></h3><p><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/6.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/5.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/7.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/8.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/9.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/10.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/11.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/12.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/13.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/14.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/15.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/16.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/17.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/18.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/19.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/20.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/21.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/22.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/23.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/24.jpeg" alt=""><br><img src="../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/25.jpeg" alt=""></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;cj-子&quot;&gt;CJ 子&lt;a title=&quot;#cj-子&quot; href=&quot;#cj-子&quot;&gt;&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&quot;../images/%E5%A5%BD%E5%BA%B7%E7%9A%84/6.jpeg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
-&lt;img src=&quot;.</summary>
-      
-    
-    
-    
-    <category term="照片子" scheme="http://qiuxiaori.github.com/categories/%E7%85%A7%E7%89%87%E5%AD%90/"/>
-    
-    
-    <category term="私" scheme="http://qiuxiaori.github.com/tags/%E7%A7%81/"/>
     
   </entry>
   
