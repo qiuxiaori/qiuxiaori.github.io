@@ -5,7 +5,7 @@ categories: 编程技术
 ---
 
 > iterm2 快捷键！ & 有趣的小玩意儿
-<!--readmore-->
+<!--more-->
 
 ### 一. 快捷键
 

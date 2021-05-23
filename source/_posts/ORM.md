@@ -4,11 +4,11 @@ tags: orm
 categories: 编程技术
 ---
 
-<!--readmore-->
 ### 一. 概述
 
 ORM 是通过实例对象的语法，完成关系型数据库的操作的技术，是"对象-关系映射"（Object/Relational Mapping） 的缩写。
 
+<!--more-->
 ##### 对应关系
 | 数据库 | 对象 |
 |:---|:---|
