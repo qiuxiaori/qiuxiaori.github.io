@@ -1,7 +1,7 @@
 ---
 title: Docker实战之mongo
 tags: docker
-categories: 编程技术
+categories: program
 ---
 
 > 使用 docker 运行 mongo，可以省去安装 mongo 数据库的步骤， docker也提供有mongo的镜像，不过还是有许多要配置的地方。

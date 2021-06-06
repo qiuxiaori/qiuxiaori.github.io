@@ -1,7 +1,7 @@
 ---
 title: FFmpeg插件的使用
 tags: 文件
-categories: 编程技术
+categories: program
 ---
 
 > FFmpeg 是一个自由软件，可以运行音频和视频多种格式的录影、转换、流功能，包含了 libavcodec——这是一个用于多个项目中音频和视频的解码器库，以及 libavformat——一个音频与视频格式转换库。 “FFmpeg”这个单词中的“FF”指的是“Fast Forward”。[ffmpeg](https://www.npmjs.com/package/ffmpeg)插件提供了一组函数和实用程序来抽象 ffmpeg 的命令行用法。

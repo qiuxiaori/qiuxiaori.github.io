@@ -1,7 +1,7 @@
 ---
 title: npm包开发
 tags: npm
-categories: 编程技术
+categories: program
 ---
 
 #### 一. 配置eslint

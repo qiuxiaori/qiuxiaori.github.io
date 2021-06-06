@@ -1,7 +1,7 @@
 ---
 title: js模块
 tags: js
-categories: 编程技术
+categories: program
 ---
 
 > 原生javascript的一些对象的常用方法备份。

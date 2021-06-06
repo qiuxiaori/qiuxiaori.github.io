@@ -1,7 +1,7 @@
 ---
 title: Node和进程线程
 tags: node
-categories: 编程技术
+categories: program
 ---
 
 公司分享会的内容，随手记

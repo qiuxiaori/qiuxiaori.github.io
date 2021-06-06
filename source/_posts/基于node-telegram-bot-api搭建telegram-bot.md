@@ -1,7 +1,7 @@
 ---
 title: 基于node-telegram-bot-api搭建telegram-bot
 tags: telegram
-categories: 编程技术
+categories: program
 ---
 
 

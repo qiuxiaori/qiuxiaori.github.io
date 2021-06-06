@@ -1,7 +1,7 @@
 ---
 title: 《HTTP权威指南》笔记（1）
 tags: http
-categories: 编程技术
+categories: program
 ---
 
 

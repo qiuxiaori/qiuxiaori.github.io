@@ -1,6 +1,6 @@
 ---
 title: log4js实战
-categories: 编程技术
+categories: program
 ---
 
 ####

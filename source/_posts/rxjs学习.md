@@ -1,7 +1,7 @@
 ---
 title: Rxjs学习
 tags: rxjs
-categories: 编程技术
+categories: program
 ---
 RxJS 是一个库，它通过使用 observable 序列来编写异步和基于事件的程序。它提供了一个核心类型 Observable，附属类型 (Observer、 Schedulers、 Subjects) 和受 [Array#extras] 启发的操作符 (map、filter、reduce、every, 等等)，这些数组操作符可以把异步事件作为集合来处理。
 

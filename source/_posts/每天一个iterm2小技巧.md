@@ -1,7 +1,7 @@
 ---
 title: 每天一个 iterm2 小技巧
 tags: iterm2
-categories: 编程技术
+categories: program
 ---
 
 > iterm2 快捷键！ & 有趣的小玩意儿

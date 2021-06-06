@@ -1,7 +1,7 @@
 ---
 title: 前端页面使用editor编辑器
 tags: 前端
-categories: 编程技术
+categories: program
 ---
 
 > 富文本编辑器，Rich Text Editor, 简称 RTE, 是一种可内嵌于浏览器，所见即所得的文本编辑器。富文本编辑器不同于文本编辑器，程序员可到网上下载免费的富文本编辑器内嵌于自己的网站或程序里，方便用户编辑文章或信息。

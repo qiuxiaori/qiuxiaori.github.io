@@ -1,7 +1,7 @@
 ---
 title: node线上部署pm2篇
 tags: pm2
-categories: 编程技术
+categories: program
 ---
 
 > [PM2](http://pm2.keymetrics.io/docs/usage/quick-start/#42-starts)是守护进程管理器，可帮助您管理和保持应用程序在线。PM2入门很简单，它是一个简单直观的CLI，可通过NPM安装。

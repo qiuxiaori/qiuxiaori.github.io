@@ -1,7 +1,7 @@
 ---
 title: Inside主题配置
 tags: 'hexo theme'
-categories: hexo
+categories: program
 ---
 
 源码: [Github地址](https://github.com/ikeq/hexo-theme-inside)

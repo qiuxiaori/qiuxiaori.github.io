@@ -1,7 +1,7 @@
 ---
 title: egg框架中实现上传文件
 tags: egg
-categories: 编程技术
+categories: program
 ---
 
 > 接了个公司的需求，根据上传文件自动生成数据条目，egg 内置了 multipart 模块，之前没有使用过，就这次需求简要总结下使用方式和踩的坑。具体见 egg-multipart 的[官方教程](https://github.com/eggjs/egg-multipart)。

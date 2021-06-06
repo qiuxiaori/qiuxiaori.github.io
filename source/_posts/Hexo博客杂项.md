@@ -4,7 +4,7 @@ author: 秋小日
 tags:
   - hexo
 categories:
-  - hexo
+  - program
 ---
 
 > 本文涉及到的知识点包: 博客一键发布，搜索引擎引擎收录及优化，github和coding站点部署等。

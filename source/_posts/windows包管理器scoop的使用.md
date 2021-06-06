@@ -1,7 +1,7 @@
 ---
 title: windows包管理器scoop的使用
 tags: scoop
-categories: 编程技术
+categories: program
 ---
 
 ### 环境要求

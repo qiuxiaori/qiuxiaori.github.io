@@ -1,7 +1,7 @@
 ---
 title: ORM简记
 tags: orm
-categories: 编程技术
+categories: program
 ---
 
 ### 一. 概述

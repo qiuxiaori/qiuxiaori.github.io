@@ -1,7 +1,7 @@
 ---
 title: 能看的Hexo主题
 tags: hexo
-categories: hexo
+categories: program
 ---
 
 一些还算能看的主题收藏备用

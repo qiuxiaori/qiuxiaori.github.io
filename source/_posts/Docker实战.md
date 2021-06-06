@@ -1,7 +1,7 @@
 ---
 title: Docker实战
 tags: docker
-categories: 编程技术
+categories: program
 ---
 
 > 写在前面

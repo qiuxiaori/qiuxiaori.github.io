@@ -1,7 +1,7 @@
 ---
 title: Git的使用
 tags: 教程
-categories: 编程技术
+categories: program
 ---
 
 > git 是一个分散式版本管理工具，最初由林纳斯·托瓦兹创作，于 2005 年以 GPL 发布。最初目的是为更好地管理 Linux 内核开发而设计。

@@ -1,7 +1,7 @@
 ---
 title: powershell美化
 tags: powershell
-categories: 编程技术
+categories: program
 ---
 
 ### 一.字体

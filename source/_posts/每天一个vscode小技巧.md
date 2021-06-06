@@ -1,7 +1,7 @@
 ---
 title: 每天一个 vscode 小技巧
 tags: vscode
-categories: 编程技术
+categories: program
 ---
 
 又学会了没用的知识呢..

@@ -1,6 +1,6 @@
 ---
 title: Node深入浅出
-categories: 编程技术
+categories: program
 tags: node
 ---
 

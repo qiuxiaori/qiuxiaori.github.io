@@ -1,6 +1,6 @@
 ---
 title: http学习
-categories: 编程技术
+categories: program
 tags: http
 ---
 

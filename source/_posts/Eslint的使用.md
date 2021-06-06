@@ -2,7 +2,7 @@
 title: ESLint使用简介
 tags: 教程
 categories: 
-- 编程技术
+- program
 
 ---
 
